@@ -6,6 +6,7 @@ import WeatherDetails from '@/components/WeatherDetails'
 import { LocationData } from './interfaces/LocationData'
 import axios from 'axios'
 import { useState } from 'react'
+import Signature from '@/components/Signature'
 
 const initialLocationData: LocationData = {
   name: '',
@@ -67,6 +68,7 @@ const Home: React.FC = () => {
       {search && failed && <NotFound />}
       {search && !failed && <WeatherBox locationData={locationData}/>}
       {search && !failed && <WeatherDetails locationData={locationData} />}
+      {search && <Signature />}
     </div>
   )
 }
