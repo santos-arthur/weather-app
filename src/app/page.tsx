@@ -62,7 +62,7 @@ const Home: React.FC = () => {
     });
   };
   return (
-    <div className='relative w-fit min-w- h-min-fit bg-sky-50 text-gray-900 rounded-lg p-8 overflow-hidden'>
+    <div className='relative w-fit max-w-sm h-min-fit bg-sky-50 text-gray-900 rounded-lg p-8 overflow-hidden'>
       <SearchBox search={handleSearch} />
       {search && failed && <NotFound />}
       {search && !failed && <WeatherBox locationData={locationData}/>}

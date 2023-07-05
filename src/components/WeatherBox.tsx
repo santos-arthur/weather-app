@@ -26,16 +26,19 @@ const WeatherBox: React.FC<WeatherBoxProps> = ({locationData}) => {
   });
   
   return(
-    <div className='weather-box text-center mt-8'>
-      <Image
-        src={`/images/weather/${icon}`}
-        alt={description}
-        width='300'
-        height='300'
-      />
-      <p className='temperature relative text-2xl font-medium mt-2'>{description}</p>
-      <p className='temperature relative text-7xl font-semibold mt-8'>{locationData.temp}°C</p>
-      <p className='description mt-4 text-2xl font-medium'>{locationData.name}, {locationData.region} - {locationData.country}</p>
+    <div className='weather-box text-center mt-4'>
+      <center>
+        <Image
+          src={`/images/weather/${icon}`}
+          alt={description}
+          className='-mt-4'
+          width='256'
+          height='256'
+        />
+        <p className='text-2xl font-medium -mt-4'>{description}</p>
+        <p className='temperature text-7xl font-semibold mt-4'>{locationData.temp}°C</p>
+        <p className='description mt-4 text-2xl font-medium whitespace-pre-wrap'>{locationData.name}, {locationData.region} - {locationData.country}</p>
+      </center>
     </div>
   ) 
 }
